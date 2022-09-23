@@ -2,7 +2,13 @@ import { useEffect, useState } from 'react';
 import getGifs from '../services/getGifs';
 import { Gif } from './Gif';
 
-export const ListOfGifs = ({ params }: any) => {
+interface GifParams {
+  params: {
+    keyword: string
+  }
+}
+
+export const ListOfGifs = ({ params }: GifParams) => {
   const [gifs, setGifs] = useState<any>([]);
   const { keyword } = params;
 
