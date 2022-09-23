@@ -12,7 +12,7 @@ function App() {
           </Link>
         </h1>
         <Link to="/gif/rickandmorty">GIFs de Rick&Morty</Link>
-        <Link to="/gif/pandas">GIFs de Pandas</Link>
+        <Link to="/gif/dragonball">GIFs de Dragon Ball</Link>
         <Link to="/gif/akira">GIFs de Akira</Link>
         <ul className="gifs-list">
           <Route path="/gif/:keyword" component={ListOfGifs} />
