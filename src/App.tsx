@@ -1,25 +1,31 @@
 import './App.css';
-import { ListOfGifs } from './components/ListOfGifs';
 import { Link, Route } from 'wouter';
+import Details from './pages/Details';
+import Home from './pages/Home';
+import SearchResults from './pages/SearchResults';
 
 function App() {
   return (
     <div className="App">
       <section className="App-content">
-        <h1>
-          <Link to="/" id="App-title">
-            Gifify
-          </Link>
-        </h1>
-        <Link to="/gif/rickandmorty">GIFs de Rick&Morty</Link>
-        <Link to="/gif/dragonball">GIFs de Dragon Ball</Link>
-        <Link to="/gif/akira">GIFs de Akira</Link>
-        <ul className="gifs-list">
-          <Route path="/gif/:keyword" component={ListOfGifs} />
-        </ul>
+        <Link to="/">
+          <img className='App-logo' alt='Gifify logo' src='/logo.png'/>
+        </Link>
+        <Route 
+          component={Home}
+          path='/'
+        />
+        <Route 
+          component={SearchResults}
+          path='/search/:keyword'
+        />
+        <Route 
+          component={Details}
+          path='/gif/:id'
+        />
       </section>
     </div>
   );
 }
 
-export default App;
+export default App

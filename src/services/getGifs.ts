@@ -1,7 +1,6 @@
-import { gifProps } from "../components/Gif"
 const apiKey = 'TmYwgTIRs8RQKafCQXzSuE6HBxgfYhuX'
 
-export default async function getGifs({keyword = 'morty'} = {}): Promise<gifProps[] | undefined> {
+export default async function getGifs({keyword = 'morty'} = {}): Promise<any[] | undefined> {
   const apiUrl =
   `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${keyword}&limit=25&offset=0&rating=g&lang=en`
   
