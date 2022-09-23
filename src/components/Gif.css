@@ -17,3 +17,7 @@
 .Gif img {
   object-fit: contain;
 }
+
+span {
+  font-size: 80px;
+}
