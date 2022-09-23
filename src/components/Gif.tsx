@@ -1,6 +1,6 @@
 import './Gif.css';
 
-interface gifProps {
+export interface gifProps {
   title: string;
   id: string;
   url: string;
